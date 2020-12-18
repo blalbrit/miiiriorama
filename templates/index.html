@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+	<title>Miiiriorama</title>
+	 <script type="text/javascript">
+		 
+	    stanford = new Array();
+	    stanford[0] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0002/162,144,1587,4591/full/0/default.jpg';
+	    stanford[1] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0004/151,154,1612,4618/full/0/default.jpg';
+	    stanford[2] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0006/153,147,1608,4610/full/0/default.jpg';
+	    stanford[3] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0008/151,134,1612,4618/full/0/default.jpg';
+	    stanford[4] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0010/153,147,1608,4610/full/0/default.jpg';
+	    stanford[5] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0012/153,147,1608,4610/full/0/default.jpg';
+	    stanford[6] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0014/153,147,1608,4610/full/0/default.jpg';
+	    stanford[7] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0016/138,128,1619,4631/full/0/default.jpg';
+		stanford[8] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0018/138,160,1632,4573/full/0/default.jpg';
+		stanford[9] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0020/145,134,1619,4631/full/0/default.jpg';
+		stanford[10] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0022/145,134,1638,4618/full/0/default.jpg';
+		stanford[11] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0024/145,134,1638,4618/full/0/default.jpg';
+		stanford[12] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0026/145,134,1638,4618/full/0/default.jpg';
+		stanford[13] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0028/145,134,1638,4618/full/0/default.jpg';
+		stanford[14] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0030/164,134,1593,4618/full/0/default.jpg';
+		stanford[15] = 'https://stacks.stanford.edu/image/iiif/vp548mj5583%2Fvp548mj5583_0032/138,141,1619,4611/full/0/default.jpg';
+		
+		oxford1 = new Array();
+	    oxford1[0] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/245,184,1458,4153/full/0/default.jpg';
+	    oxford1[1] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/1750,184,1458,4153/full/0/default.jpg';
+	    oxford1[2] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/3240,196,1458,4196/full/0/default.jpg';
+	    oxford1[3] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/4770,208,1458,4141/full/0/default.jpg';
+	    oxford1[4] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/6300,196,1458,4153/full/0/default.jpg';
+	    oxford1[5] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/7821,220,1458,4141/full/0/default.jpg';
+	    oxford1[6] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/9315,220,1458,4153/full/0/default.jpg';
+	    oxford1[7] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/3a289853-e76f-450e-8369-56b0d137dc29/10850,221,1458,4129/full/0/default.jpg';
+		oxford1[8] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/256,206,1464,4162/full/0/default.jpg';
+		oxford1[9] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/1809,218,1426,4162/full/0/default.jpg';
+		oxford1[10] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/3323,206,1426,4162/full/0/default.jpg';
+		oxford1[11] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/4799,231,1426,4162/full/0/default.jpg';
+		oxford1[12] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/6301,218,1426,4162/full/0/default.jpg';
+		oxford1[13] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/7854,206,1426,4162/full/0/default.jpg';
+		oxford1[14] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/9342,244,1426,4162/full/0/default.jpg';
+		oxford1[15] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/4bf311a3-43e0-47b3-a1f3-760d39fd6ad7/10857,231,1426,4162/full/0/default.jpg';
+		oxford1[16] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/206,248,1444,4118/full/0/default.jpg';
+		oxford1[17] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/1695,236,1444,4118/full/0/default.jpg';
+		oxford1[18] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/3196,225,1444,4118/full/0/default.jpg';
+		oxford1[19] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/4719,248,1444,4118/full/0/default.jpg';
+		oxford1[20] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/6208,214,1444,4118/full/0/default.jpg';
+		oxford1[21] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/7764,236,1444,4118/full/0/default.jpg';
+		oxford1[22] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/9287,236,1444,4118/full/0/default.jpg';
+		oxford1[23] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/61f6afbb-34e5-4707-b41e-edf47bed0ec3/10810,225,1444,4118/full/0/default.jpg';
+		
+		oxford2 = new Array();
+	    oxford2[0] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/407,376,761,2048/full/0/default.jpg';
+	    oxford2[1] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/1285,376,761,2048/full/0/default.jpg';
+	    oxford2[2] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/2116,365,761,2048/full/0/default.jpg';
+	    oxford2[3] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/2970,388,761,2048/full/0/default.jpg';
+	    oxford2[4] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/3789,388,761,2048/full/0/default.jpg';
+	    oxford2[5] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/4632,388,761,2048/full/0/default.jpg';
+	    oxford2[6] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/5451,388,761,2048/full/0/default.jpg';
+	    oxford2[7] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/6305,400,761,2048/full/0/default.jpg';
+		oxford2[8] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/430,2693,761,2048/full/0/default.jpg';
+		oxford2[9] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/1273,2635,761,2048/full/0/default.jpg';
+		oxford2[10] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/2139,2647,761,2048/full/0/default.jpg';
+		oxford2[11] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/2947,2647,761,2048/full/0/default.jpg';
+		oxford2[12] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/3766,2612,761,2048/full/0/default.jpg';
+		oxford2[13] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/4608,2658,761,2048/full/0/default.jpg';
+		oxford2[14] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/5439,2635,761,2048/full/0/default.jpg';
+		oxford2[15] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/cbdb999c-c41d-4a8a-9074-eec8fe008ce8/6282,2623,761,2048/full/0/default.jpg';
+		
+		oxford3 = new Array();
+	    oxford3[0] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/361,283,1357,3791/full/0/default.jpg';
+	    oxford3[1] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/1777,283,1357,3791/full/0/default.jpg';
+	    oxford3[2] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/3214,303,1357,3791/full/0/default.jpg';
+	    oxford3[3] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/4630,283,1357,3791/full/0/default.jpg';
+	    oxford3[4] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/6087,283,1357,3791/full/0/default.jpg';
+	    oxford3[5] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/7504,263,1357,3791/full/0/default.jpg';
+	    oxford3[6] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/8960,303,1357,3791/full/0/default.jpg';
+	    oxford3[7] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/10417,263,1357,3791/full/0/default.jpg';
+		oxford3[8] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/341,4313,1357,3791/full/0/default.jpg';
+		oxford3[9] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/1797,4293,1357,3791/full/0/default.jpg';
+		oxford3[10] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/3194,4333,1357,3791/full/0/default.jpg';
+		oxford3[11] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/4630,4313,1357,3791/full/0/default.jpg';
+		oxford3[12] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/6087,4293,1357,3791/full/0/default.jpg';
+		oxford3[13] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/7543,4313,1357,3791/full/0/default.jpg';
+		oxford3[14] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/9000,4313,1357,3791/full/0/default.jpg';
+		oxford3[15] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/ce15bca4-d0e3-4285-a63b-1d63da96282e/10456,4333,1357,3791/full/0/default.jpg';
+		
+
+	
+	function getRandomImage() {
+	    newArray = stanford.sort(() => Math.random() - 0.5);
+	    document.getElementById("randImage1").innerHTML = ('<img src="' + newArray[0] + '" height="400px">');
+		document.getElementById("randImage2").innerHTML = ('<img src="' + newArray[1] + '" height="400px">');
+		document.getElementById("randImage3").innerHTML = ('<img src="' + newArray[2] + '" height="400px">');
+		document.getElementById("randImage4").innerHTML = ('<img src="' + newArray[3] + '" height="400px">');
+		document.getElementById("randImage5").innerHTML = ('<img src="' + newArray[4] + '" height="400px">');
+		document.getElementById("randImage6").innerHTML = ('<img src="' + newArray[5] + '" height="400px">');
+		document.getElementById("randImage7").innerHTML = ('<img src="' + newArray[6] + '" height="400px">');
+		document.getElementById("randImage8").innerHTML = ('<img src="' + newArray[7] + '" height="400px">');
+
+	}
+	
+	function getOxford1Image() {
+	    newArray = oxford1.sort(() => Math.random() - 0.5);
+	    document.getElementById("randImage1").innerHTML = ('<img src="' + newArray[0] + '" height="400px">');
+		document.getElementById("randImage2").innerHTML = ('<img src="' + newArray[1] + '" height="400px">');
+		document.getElementById("randImage3").innerHTML = ('<img src="' + newArray[2] + '" height="400px">');
+		document.getElementById("randImage4").innerHTML = ('<img src="' + newArray[3] + '" height="400px">');
+		document.getElementById("randImage5").innerHTML = ('<img src="' + newArray[4] + '" height="400px">');
+		document.getElementById("randImage6").innerHTML = ('<img src="' + newArray[5] + '" height="400px">');
+		document.getElementById("randImage7").innerHTML = ('<img src="' + newArray[6] + '" height="400px">');
+		document.getElementById("randImage8").innerHTML = ('<img src="' + newArray[7] + '" height="400px">');
+	}
+	
+	function getOxford2Image() {
+	    newArray = oxford2.sort(() => Math.random() - 0.5);
+	    document.getElementById("randImage1").innerHTML = ('<img src="' + newArray[0] + '" height="400px">');
+		document.getElementById("randImage2").innerHTML = ('<img src="' + newArray[1] + '" height="400px">');
+		document.getElementById("randImage3").innerHTML = ('<img src="' + newArray[2] + '" height="400px">');
+		document.getElementById("randImage4").innerHTML = ('<img src="' + newArray[3] + '" height="400px">');
+		document.getElementById("randImage5").innerHTML = ('<img src="' + newArray[4] + '" height="400px">');
+		document.getElementById("randImage6").innerHTML = ('<img src="' + newArray[5] + '" height="400px">');
+		document.getElementById("randImage7").innerHTML = ('<img src="' + newArray[6] + '" height="400px">');
+		document.getElementById("randImage8").innerHTML = ('<img src="' + newArray[7] + '" height="400px">');
+	}
+	
+	function getOxford3Image() {
+	    newArray = oxford3.sort(() => Math.random() - 0.5);
+	    document.getElementById("randImage1").innerHTML = ('<img src="' + newArray[0] + '" height="400px">');
+		document.getElementById("randImage2").innerHTML = ('<img src="' + newArray[1] + '" height="400px">');
+		document.getElementById("randImage3").innerHTML = ('<img src="' + newArray[2] + '" height="400px">');
+		document.getElementById("randImage4").innerHTML = ('<img src="' + newArray[3] + '" height="400px">');
+		document.getElementById("randImage5").innerHTML = ('<img src="' + newArray[4] + '" height="400px">');
+		document.getElementById("randImage6").innerHTML = ('<img src="' + newArray[5] + '" height="400px">');
+		document.getElementById("randImage7").innerHTML = ('<img src="' + newArray[6] + '" height="400px">');
+		document.getElementById("randImage8").innerHTML = ('<img src="' + newArray[7] + '" height="400px">');
+	}
+	
+	function getOptionImage() {
+		var output = document.getElementById('scenes').value;
+		arrayChoice = output;
+		console.log(arrayChoice);
+	      
+	    if (arrayChoice == 'stanford') {
+	    	getRandomImage();
+	    } else if (arrayChoice == 'oxford1') {
+	    	getOxford1Image();
+	    } else if (arrayChoice == 'oxford2') {
+	    	getOxford2Image();
+	    } else {
+	    	getOxford3Image();
+	    }
+
+	}
+	</script>
+	<style>
+		#spaces section {float:left;}
+	</style>
+</head>
+<body onload="getRandomImage()">
+	<h1>Miiiriorama</h1>
+	<p>Select a deck of cards:
+	  <select name="scenes" id="scenes">
+	    <option value="stanford">Polyorama, or Endless changes of landscapes (1824) - Stanford</option>
+	    <option value="oxford1">Myriorama, second series: Italian Scenery (1824) - Oxford 1</option>
+	    <option value="oxford2">Polyorama, or Endless changes of landscape (1824) - Oxford 2</option>
+	    <option value="oxford3">Polyorama, or Endless changes of landscapes (1824) - Oxford 3</option>
+	  </select>
+	</p>
+	
+	<button onclick="getOptionImage()"> 
+	        Build a new Panorama 
+	</button>
+		
+	<article id="spaces">
+		<section>
+			<div id="randImage1"></div>
+		</section>
+		<section>
+			<div id="randImage2"></div>
+		</section>
+		<section>
+			<div id="randImage3"></div>
+		</section>
+		<section>
+			<div id="randImage4"></div>
+		</section>
+		<section>
+			<div id="randImage5"></div>
+		</section>
+		<section>
+			<div id="randImage6"></div>
+		</section>
+		<section>
+			<div id="randImage7"></div>
+		</section>
+		<section>
+			<div id="randImage8"></div>
+		</section>
+	</article>
+</body>
+</html>
