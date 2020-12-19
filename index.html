@@ -132,6 +132,24 @@
 	    oxford6[7] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/fc12d2e0-abd8-4379-9b54-85efd366ae01/8369,391,793,2221/,800/0/default.jpg';
 		oxford6[8] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/fc12d2e0-abd8-4379-9b54-85efd366ae01/9337,400,793,2221/,800/0/default.jpg';
 		
+		oxford7 = new Array();
+	    oxford7[0] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/382,280,1282,3966/full/0/default.jpg';
+	    oxford7[1] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/1785,299,1282,3966/full/0/default.jpg';
+	    oxford7[2] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/3131,280,1282,3966/full/0/default.jpg';
+	    oxford7[3] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/4534,261,1282,3966/full/0/default.jpg';
+	    oxford7[4] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/5918,299,1282,3966/full/0/default.jpg';
+	    oxford7[5] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/7265,280,1282,3966/full/0/default.jpg';
+	    oxford7[6] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/8649,261,1282,3966/full/0/default.jpg';
+	    oxford7[7] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/10052,261,1282,3966/full/0/default.jpg';
+		oxford7[8] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/400,4470,1282,3966/full/0/default.jpg';
+		oxford7[9] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/1766,4433,1282,3966/full/0/default.jpg';
+		oxford7[10] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/3150,4451,1282,3966/full/0/default.jpg';
+		oxford7[11] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/4515,4451,1282,3966/full/0/default.jpg';
+		oxford7[12] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/5881,4451,1282,3966/full/0/default.jpg';
+		oxford7[13] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/7265,4433,1282,3966/full/0/default.jpg';
+		oxford7[14] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/8649,4433,1282,3966/full/0/default.jpg';
+		oxford7[15] = 'https://iiif.bodleian.ox.ac.uk/iiif/image/675d79f6-11db-43d1-a1af-d470f26f0112/10052,4451,1282,3966/full/0/default.jpg';
+		
 		
 
 	
@@ -220,6 +238,18 @@
 		document.getElementById("randImage8").innerHTML = ('<img src="' + newArray[7] + '" height="400px">');
 	}
 	
+	function getOxford7Image() {
+	    newArray = oxford7.sort(() => Math.random() - 0.5);
+	    document.getElementById("randImage1").innerHTML = ('<img src="' + newArray[0] + '" height="400px">');
+		document.getElementById("randImage2").innerHTML = ('<img src="' + newArray[1] + '" height="400px">');
+		document.getElementById("randImage3").innerHTML = ('<img src="' + newArray[2] + '" height="400px">');
+		document.getElementById("randImage4").innerHTML = ('<img src="' + newArray[3] + '" height="400px">');
+		document.getElementById("randImage5").innerHTML = ('<img src="' + newArray[4] + '" height="400px">');
+		document.getElementById("randImage6").innerHTML = ('<img src="' + newArray[5] + '" height="400px">');
+		document.getElementById("randImage7").innerHTML = ('<img src="' + newArray[6] + '" height="400px">');
+		document.getElementById("randImage8").innerHTML = ('<img src="' + newArray[7] + '" height="400px">');
+	}
+	
 	function getOptionImage() {
 		var output = document.getElementById('scenes').value;
 		arrayChoice = output;
@@ -237,8 +267,11 @@
 	    	getOxford4Image();
 	    } else if (arrayChoice == 'oxford5') {
     		getOxford5Image();
-    	} else {
+    	} else if (arrayChoice == 'oxford6') {
     		getOxford6Image();
+    	}
+		else {
+    		getOxford7Image();
 		}
 
 	}
@@ -258,6 +291,7 @@
 		<option value="oxford4">[Myriorama] (1824) - Oxford 4</option>
 		<option value="oxford5">Myriorama. A collection of many thousand landscapes designed by Mr. Clark (1824) - Oxford 5</option>
 		<option value="oxford6">Milliorama (1825) - Oxford 6</option>
+		<option value="oxford7">Choriorama, and youth's instructor in the art of composing & drawing landscape scenery (1824) - Oxford 7</option>
 	  </select>
 	</p>
 	
